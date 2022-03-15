@@ -1,0 +1,44 @@
+.attainment {
+  &-content {
+    padding: 0 20px;
+    &-header {
+      display: flex;
+      align-items: center;
+      
+      &-year {
+        display: flex;
+        align-items: center;
+        width: 360px;
+      }
+    }
+    &-main {
+      padding: 7px 14px;
+      border: 1px solid #E4E4E4;
+      margin-top: 5px;
+      &-table,&-descriptions {
+        display: flex;
+        justify-content: center;
+      }
+      &-descriptions {
+        margin-bottom: 10px;
+        .el-descriptions {
+          width: 968px;
+          .el-descriptions-item{
+            padding-bottom: 2px;
+          }
+        }
+      }
+      &-table {
+        table, th, td {
+          border: 1px solid black;
+        }
+        table {
+          border-collapse: collapse;
+        }
+        tr {
+          height: 30px
+        }
+      }
+    }
+  }
+}

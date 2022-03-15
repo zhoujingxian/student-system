@@ -14,15 +14,26 @@
               <el-menu-item index="information">基本信息</el-menu-item>
               <el-menu-item index="put-information">增改个人信息</el-menu-item>
             </el-submenu>
-            <el-menu-item index="attainment">
-              <span class="menu-title" slot="title">学业成绩</span>
-            </el-menu-item>
-            <el-menu-item index="arrangement">
-              <span class="menu-title" slot="title">教学安排</span>
-            </el-menu-item>
-            <el-menu-item index="variable">
-              <span class="menu-title" slot="title">网上选课</span>
-            </el-menu-item>
+            <el-submenu index="2">
+              <template slot="title">
+                <span class="menu-title">学业成绩</span>
+              </template>
+              <el-menu-item index="attainment">查看成绩</el-menu-item>
+            </el-submenu>
+            
+            <el-submenu index="3">
+              <template slot="title">
+                <span class="menu-title">教学安排</span>
+              </template>
+              <el-menu-item index="arrangement">我的课表</el-menu-item>
+            </el-submenu>
+            <el-submenu index="4">
+              <template slot="title">
+                <span class="menu-title">网上选课</span>
+              </template>
+              <el-menu-item index="variable">预选</el-menu-item>
+              <el-menu-item index="variable-results">选课结果</el-menu-item>
+            </el-submenu>
           </el-menu>
         </div>
       </el-col>

@@ -74,6 +74,8 @@ import {
   PageHeader,
   CascaderPanel,
   Loading,
+  Descriptions,
+  DescriptionsItem
 } from 'element-ui';
 
 Vue.use(Pagination);
@@ -149,5 +151,6 @@ Vue.use(Calendar);
 Vue.use(Backtop);
 Vue.use(PageHeader);
 Vue.use(CascaderPanel);
-
+Vue.use(Descriptions);
+Vue.use(DescriptionsItem)
 Vue.use(Loading.directive);

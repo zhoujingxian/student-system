@@ -1,0 +1,21 @@
+.variable {
+  &-content {
+    padding:0 20px;
+    &-header {
+      display: flex;
+    }
+    &-main {
+      &-table {
+        table, th, td {
+          border: 1px solid black;
+        }
+        table {
+          border-collapse: collapse;
+        }
+        tr {
+          height: 30px
+        }
+      }
+    }
+  }
+}

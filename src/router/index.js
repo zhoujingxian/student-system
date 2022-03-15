@@ -29,6 +29,10 @@ const routes = [
         path: '/variable',
         name: 'variable',
         component: () => import( '../views/student/variable.vue')
+      },{
+        path: '/variable-results',
+        name: 'results',
+        component: () => import( '../views/student/variable-results.vue')
       }
     ]
   }
