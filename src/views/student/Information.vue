@@ -2,7 +2,7 @@
   <div class="information">
     <h1>基本信息</h1>
     <div class="table">
-      <table id="tablesid" cellpadding="0" cellspacing="0" align="center" style="border: 1px solid rgb(229, 229, 229);">
+      <table id="tablesid" cellpadding="0" cellspacing="0" align="center" style="border: 1px solid rgb(229, 229, 229);" v-if="infoData">
 				<thead>
 					<tr class="H">
 						<td colspan="6">
@@ -17,13 +17,13 @@
 								学&ensp;&ensp;&ensp;&ensp;号
 							</div>
 						</td>
-						<td id="xh" style="width: 14%; border: 1px solid rgb(229, 229, 229);">2018112251</td>
+						<td id="xh" style="width: 14%; border: 1px solid rgb(229, 229, 229);" v-html="infoData.id"></td>
 						<td style="width: 15%; border: 1px solid rgb(229, 229, 229);">
 							<div align="center">
 								姓&ensp;&ensp;&ensp;&ensp;名
 							</div>
 						</td>
-						<td id="xm" colspan="2" style="border: 1px solid rgb(229, 229, 229);">周景贤</td>
+						<td id="xm" colspan="2" style="border: 1px solid rgb(229, 229, 229);" v-html="infoData.name"></td>
 						<td rowspan="6" style="overflow: hidden; vertical-align: middle; border: 1px solid rgb(229, 229, 229);">
 							<table style="float:clear" width="100%" height="100%">
 								<tbody><tr>
@@ -620,11 +620,22 @@
 </template>
 
 <script>
+import { mapActions, mapState} from 'vuex'
 export default {
-  name: 'Home',
+  name: 'student-info',
   components: {
-    
-  }
+  },
+  created() {
+    this.info('2018112251');
+  },
+  mounted() {
+  },
+  methods: {
+    ...mapActions('students', ['info']),
+  },
+  computed: mapState('students', {
+    infoData: state => state.info.data
+  })
 }
 </script>
 

@@ -1,0 +1,13 @@
+.class-info {
+  &-content {
+    &-header {
+      display: flex;
+      align-items: center;
+    }
+    &-main {
+      &-table {
+        margin-top: 20px;
+      }
+    }
+  }
+}

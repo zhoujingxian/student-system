@@ -1,0 +1,24 @@
+.set-attainment {
+  &-content {
+    &-header {
+      &-set {
+        margin-left: 20px;
+      }
+    }
+    &-main {
+      margin-top: 20px;
+      &-table {
+        table {
+          margin: 0 auto;
+          .el-input{
+            .el-input__inner {
+              background-color: #fff;
+              border: 0;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
